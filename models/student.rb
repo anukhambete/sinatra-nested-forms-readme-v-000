@@ -1,17 +1,16 @@
+class Student
+  attr_reader :name, :grade
 
-classclass  StudentStudent
-    attr_readerattr_reader  :name:name,,  :grade:grade
-  
-  STUDENTSSTUDENTS  ==  [][]
-  
-    defdef  initializeinitialize((paramsparams))
-        @name@name  ==  paramsparams[[:name:name]]
-        @grade@grade  ==  paramsparams[[:grade:grade]]
-        STUDENTSSTUDENTS  <<<<  selfself
-    endend
-  
-    defdef  selfself..allall
-        STUDENTSSTUDENTS
-    endend
-  
-endend
+ STUDENTS = []
+
+  def initialize(params)
+    @name = params[:name]
+    @grade = params[:grade]
+    STUDENTS << self
+  end
+
+  def self.all
+    STUDENTS
+  end
+
+end
